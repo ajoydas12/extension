@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Text Summarizer Extension",
+    "version": "1.0",
+    "description": "A browser extension for text summarization.",
+    "icons": {
+      "16": "logo.png",
+      "48": "logo.png",
+      "128": "logo.png"
+    },
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": [
+      "activeTab"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["script.js"],
+        "run_at": "document_end"
+      }
+    ]
+  }
+  
